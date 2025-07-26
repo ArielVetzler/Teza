@@ -5,7 +5,7 @@ import MatchStream from './components/MatchStream/MatchStream';
 import DashboardHeader from './components/DashboardHeader/DashboardHeader';
 import './App.css';
 
-const WS_URL = process.env.VITE_WS_URL || 'ws://localhost:8000/ws';
+const WS_URL = import.meta.env.VITE_WS_URL || 'ws://localhost:8000/ws';
 
 const App = () => {
   const [articles, setArticles] = useState([]);
