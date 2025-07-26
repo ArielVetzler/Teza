@@ -2,7 +2,19 @@ import React from 'react';
 import Card from '../Card/Card';
 import './ArticleFeed.css';
 
-export default React.memo(function ArticleFeed({ articles }) {
+interface Article {
+  id: string;
+  title: string;
+  content?: string;
+  llm_tags?: string[];
+  tags?: string[];
+}
+
+interface ArticleFeedProps {
+  articles: Article[];
+}
+
+export default React.memo(function ArticleFeed({ articles }: ArticleFeedProps) {
   const maxTagsToShow = 4;
   return (
     <Card>

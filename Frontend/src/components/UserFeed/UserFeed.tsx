@@ -2,7 +2,16 @@ import React from 'react';
 import Card from '../Card/Card';
 import './UserFeed.css';
 
-const UserFeed = React.memo(({ users }) => {
+interface User {
+  id: string;
+  tags: string[];
+}
+
+interface UserFeedProps {
+  users: User[];
+}
+
+const UserFeed = React.memo(({ users }: UserFeedProps) => {
   const maxTagsToShow = 4;
   return (
     <Card>
