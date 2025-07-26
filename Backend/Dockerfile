@@ -21,7 +21,9 @@ FROM python:3.10-slim
 
 WORKDIR /app
 
+# Copy installed dependencies and binaries
 COPY --from=builder /usr/local/lib/python3.10/site-packages /usr/local/lib/python3.10/site-packages
+COPY --from=builder /usr/local/bin /usr/local/bin
 COPY --from=builder /app /app
 
 EXPOSE 8000
