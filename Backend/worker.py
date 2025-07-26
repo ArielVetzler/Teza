@@ -1,12 +1,9 @@
-import asyncio
 from typing import Dict, Any, List
 
 import numpy as np
-from sentence_transformers import SentenceTransformer
 
-from app.models import Article
-from app.utils import timeit
-from app.llm_integration import LLMIntegration
+from models import Article
+from llm_integration import LLMIntegration
 
 
 class LLMWorker:

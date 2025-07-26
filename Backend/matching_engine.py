@@ -2,7 +2,7 @@ from typing import List, Dict
 from collections import deque, defaultdict
 import numpy as np
 
-from app.models import Article, User, Match
+from models import Article, User, Match
 
 
 def cosine_similarity(vec1: List[float], vec2: List[float]) -> float:

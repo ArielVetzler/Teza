@@ -1,15 +1,12 @@
 import asyncio
 import random
 import uuid
-from datetime import datetime, timedelta
 from typing import AsyncGenerator, List
 
 import numpy as np
 from faker import Faker
-from sentence_transformers import SentenceTransformer
 
-from app.models import Article, User
-from app.utils import timeit
+from models import Article, User
 
 fake = Faker()
 model = None

@@ -10,12 +10,12 @@ from fastapi import FastAPI, WebSocket, WebSocketDisconnect
 from fastapi.staticfiles import StaticFiles
 from sentence_transformers import SentenceTransformer
 
-from app.connection_manager import ConnectionManager
-from app.generators import generate_synthetic_articles, generate_synthetic_users, set_embedding_model
-from app.matching_engine import MatchingEngine
-from app.models import User
-from app.redis_queue import RedisJobQueue
-from app.worker import LLMWorker
+from connection_manager import ConnectionManager
+from generators import generate_synthetic_articles, generate_synthetic_users, set_embedding_model
+from matching_engine import MatchingEngine
+from models import User
+from redis_queue import RedisJobQueue
+from worker import LLMWorker
 
 # --- FastAPI App Setup ---
 
