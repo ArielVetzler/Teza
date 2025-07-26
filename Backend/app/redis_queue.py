@@ -9,7 +9,7 @@ class RedisJobQueue:
         self.redis = None
 
     async def connect(self):
-        self.redis = await aioredis.from_url(self.redis_url)
+        self.redis = await aioredis.create_redis_pool(self.redis_url)
 
     async def disconnect(self):
         if self.redis:
