@@ -1,0 +1,54 @@
+.controls-container {
+  background-color: #fff;
+  border-radius: 0.75rem;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -2px rgba(0, 0, 0, 0.1);
+  padding: 1.5rem;
+  margin-bottom: 1.5rem;
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.control-button {
+  padding: 0.75rem 1.5rem;
+  border-radius: 0.5rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.2s ease-in-out;
+  border: 1px solid #d1d5db; /* Light gray border */
+  background-color: white; /* All buttons are white */
+  color: #1f2937; /* Dark gray text */
+}
+
+.control-button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.toggle-button {
+  /* Specific styles for Play/Pause button handled by JS based on isRunning state */
+}
+
+.toggle-button.play {
+  background-color: #22c55e; /* green-500 */
+  color: white;
+  border-color: #22c55e;
+}
+
+.toggle-button.pause {
+  background-color: #ef4444; /* red-500 */
+  color: white;
+  border-color: #ef4444;
+}
+
+.control-button:hover:not(:disabled) {
+  background-color: #f3f4f6; /* bg-gray-100 for hover */
+}
+
+.toggle-button.play:hover:not(:disabled) {
+  background-color: #16a34a; /* green-600 */
+}
+
+.toggle-button.pause:hover:not(:disabled) {
+  background-color: #dc2626; /* red-600 */
+}

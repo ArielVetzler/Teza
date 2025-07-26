@@ -1,0 +1,101 @@
+.user-card {
+  margin-bottom: 10px;
+  background-color: #f9f9f9; /* Soft background color */
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.feed-item {
+  padding: 15px;
+}
+
+.user-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
+
+.user-info {
+  display: flex;
+  align-items: center;
+}
+
+.user-icon {
+  font-size: 1.2em;
+  margin-right: 8px;
+}
+
+.feed-item-id {
+  font-size: 1.1em;
+  color: #333;
+}
+
+.user-diversity-label {
+  padding: 4px 8px;
+  border-radius: 4px;
+  font-size: 0.8em;
+  font-weight: bold;
+}
+
+.diverse {
+  background-color: #e0f7fa;
+  color: #00796b;
+}
+
+.casual {
+  background-color: #fff3e0;
+  color: #e65100;
+}
+
+.tag-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px; /* Increased gap */
+}
+
+.tags-prefix {
+  font-weight: bold;
+  margin-right: 5px;
+}
+
+.tag {
+  background-color: transparent; /* Transparent background */
+  color: #007bff; /* Bold blue font */
+  padding: 5px 10px; /* Increased padding */
+  border-radius: 4px; /* Rounded edges */
+  border: 1px solid #add8e6; /* Light blue border */
+  font-size: 0.9em; /* Increased font size */
+  font-weight: bold; /* Bold font */
+  transition: background-color 0.2s ease-in-out, transform 0.2s ease-in-out; /* Animation */
+}
+
+.tag:hover {
+  background-color: #e0f2f7; /* Very light blue on hover for transparent background */
+  transform: translateY(-1px); /* Slight lift effect */
+}
+
+.feed-title {
+  font-size: 1.2em;
+  color: #333;
+  margin-bottom: 10px;
+  display: flex;
+  align-items: center;
+}
+
+.feed-dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  display: inline-block;
+  margin-right: 8px;
+}
+
+.green {
+  background-color: #4caf50;
+}
+
+.title-separator {
+  border-bottom: 1px solid #eee;
+  margin-bottom: 15px;
+}

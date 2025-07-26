@@ -1,0 +1,35 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap');
+
+body {
+  margin: 0;
+  font-family: 'Inter', sans-serif;
+}
+
+.app-container {
+  display: flex;
+  min-height: 100vh;
+  background-color: #f3f4f6; /* bg-gray-100 */
+}
+
+.decorative-left,
+.decorative-right {
+  flex: 1;
+  background-color: #e0f2fe; /* Light blue decorative background */
+}
+
+.main-content {
+  flex: 4; /* Increased flex to make it wider */
+  padding: 2rem 1.5rem;
+  max-width: 1400px; /* Increased max width of content */
+  margin: 0 auto; /* Center the main content */
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem; /* gap-6 between sections */
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 1.5rem; /* gap-6 */
+  flex-grow: 1; /* Allow grid to take up remaining vertical space */
+}

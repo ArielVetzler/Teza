@@ -1,0 +1,22 @@
+version: '3.8'
+
+services:
+  app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - "8000:8000"
+    environment:
+      # Inject your Gemini API Key here
+      GEMINI_API_KEY: ${GEMINI_API_KEY}
+    # Mount the current directory into the container for live reloading during development
+    # Remove this volume in production deployments
+    volumes:
+      - ./backend:/app
+    command: ["uvicorn", "main:app", "--host", "0.0.0.0", "--port", "8000", "--reload"]
+
+  redis:
+    image: "redis:latest"
+    ports:
+      - "6379:6379"

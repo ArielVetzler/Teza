@@ -1,0 +1,69 @@
+.article-card {
+  margin-bottom: 10px;
+  background-color: #f9f9f9; /* Soft background color */
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.feed-item {
+  padding: 15px;
+}
+
+.feed-item-title {
+  font-size: 1.1em;
+  margin-bottom: 5px;
+  color: #333;
+}
+
+.feed-item-summary {
+  font-size: 0.9em;
+  color: #666;
+  margin-bottom: 10px;
+}
+
+.tag-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px; /* Increased gap */
+}
+
+.tag {
+  background-color: transparent; /* Transparent background */
+  color: #007bff; /* Bold blue font */
+  padding: 5px 10px; /* Increased padding */
+  border-radius: 4px; /* Rounded edges */
+  border: 1px solid #add8e6; /* Light blue border */
+  font-size: 0.9em; /* Increased font size */
+  font-weight: bold; /* Bold font */
+  transition: background-color 0.2s ease-in-out, transform 0.2s ease-in-out; /* Animation */
+}
+
+.tag:hover {
+  background-color: #e0f2f7; /* Very light blue on hover for transparent background */
+  transform: translateY(-1px); /* Slight lift effect */
+}
+
+.feed-title {
+  font-size: 1.2em;
+  color: #333;
+  margin-bottom: 10px;
+  display: flex;
+  align-items: center;
+}
+
+.feed-dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  display: inline-block;
+  margin-right: 8px;
+}
+
+.blue {
+  background-color: #2196f3;
+}
+
+.title-separator {
+  border-bottom: 1px solid #eee;
+  margin-bottom: 15px;
+}
