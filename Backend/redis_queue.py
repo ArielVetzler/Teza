@@ -1,11 +1,12 @@
+import os
 import aioredis
 import json
 from typing import Dict, Any
 
 
 class RedisJobQueue:
-    def __init__(self, redis_url: str = "redis://localhost"):
-        self.redis_url = redis_url
+    def __init__(self):
+        self.redis_url = os.getenv("REDIS_URL", "redis://localhost")
         self.redis = None
 
     async def connect(self):
