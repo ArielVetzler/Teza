@@ -1,0 +1,31 @@
+# Ignore Python cache and virtual environments
+__pycache__/
+*.pyc
+*.pyo
+.venv/
+venv/
+
+# Ignore editor/IDE files
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# Ignore build artifacts and logs
+*.log
+*.tmp
+*.bak
+dist/
+build/
+*.egg-info/
+
+# Ignore version control files
+.git/
+.gitignore
+
+# Ignore environment variables file
+.env
+
+# Ignore data directories or large files not needed in the image
+data/
+logs/
