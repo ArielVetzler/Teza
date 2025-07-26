@@ -2,7 +2,7 @@ import React from 'react';
 import Card from '../Card/Card';
 import './ArticleFeed.css';
 
-const ArticleFeed = React.memo(({ articles }) => {
+export default React.memo(function ArticleFeed({ articles }) {
   const maxTagsToShow = 4;
   return (
     <Card>
@@ -33,5 +33,3 @@ const ArticleFeed = React.memo(({ articles }) => {
     </Card>
   );
 });
-
-export default ArticleFeed;
