@@ -4,7 +4,5 @@ import react from '@vitejs/plugin-react'
 export default defineConfig({
   plugins: [react()],
   base: '/', // 👈 ensures correct asset resolution
-  define: {
-    'process.env': process.env
-  }
+  
 })
