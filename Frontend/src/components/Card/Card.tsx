@@ -1,7 +1,3 @@
-import React from 'react';
-import './Card.css';
-
-import React from 'react';
 import './Card.css';
 
 interface CardProps extends React.HTMLAttributes<HTMLDivElement> {

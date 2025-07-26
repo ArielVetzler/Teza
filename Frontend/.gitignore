@@ -1,11 +1,18 @@
 # Ignore JetBrains IDE config
 .idea/
 
+# Ignore build artifacts
+dist/
+build/
+
+# Ignore compiled JS (from TypeScript)
+*.js
+*.js.map
+
+
 # Ignore local environment files
 .env*
 !env.example
 
 # Node.js artifacts
 node_modules/
-dist/
-build/

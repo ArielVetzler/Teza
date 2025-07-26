@@ -2,7 +2,19 @@ import React from 'react';
 import Card from '../Card/Card';
 import './MatchStream.css';
 
-const MatchStream = React.memo(({ matches }) => {
+interface Match {
+  article_id: string;
+  user_id: string;
+  article_name: string;
+  score: number;
+  matched_tags: string[];
+}
+
+interface MatchStreamProps {
+  matches: Match[];
+}
+
+const MatchStream = React.memo(({ matches }: MatchStreamProps) => {
   return (
     <Card>
       <h2 className="feed-title">
