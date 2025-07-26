@@ -1,7 +1,6 @@
 # Stage 1: Build the application
-FROM python:3.10-slim-buster AS builder
+FROM python:3.10-slim AS builder
 
-# Set working directory
 WORKDIR /app
 
 # Install system dependencies
@@ -14,21 +13,17 @@ RUN apt-get update && \
 COPY Backend/requirements.txt .
 RUN pip install --no-cache-dir -r requirements.txt
 
-# Copy the rest of the app
+# Copy application code
 COPY Backend/ .
 
-# Stage 2: Create the final image
-FROM python:3.10-slim-buster
+# Stage 2: Final image
+FROM python:3.10-slim
 
-# Set working directory
 WORKDIR /app
 
-# Copy installed packages and app code from builder
 COPY --from=builder /usr/local/lib/python3.10/site-packages /usr/local/lib/python3.10/site-packages
 COPY --from=builder /app /app
 
-# Expose port
 EXPOSE 8000
 
-# Run the FastAPI app
 CMD ["uvicorn", "main:app", "--host", "0.0.0.0", "--port", "8000"]
