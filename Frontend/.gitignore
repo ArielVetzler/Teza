@@ -1,0 +1,11 @@
+# Ignore JetBrains IDE config
+.idea/
+
+# Ignore local environment files
+.env*
+!env.example
+
+# Node.js artifacts
+node_modules/
+dist/
+build/
