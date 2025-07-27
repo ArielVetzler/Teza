@@ -12,4 +12,11 @@ WORKDIR /app
 
 EXPOSE 8000
 
-CMD ["echo", "ariel"]
+# Define the ENTRYPOINT for the container.
+# This makes the container behave like an executable.
+# We explicitly use the full path to python for robustness.
+ENTRYPOINT ["/usr/local/bin/python", "-m", "uvicorn"]
+
+# CMD provides the default arguments to the ENTRYPOINT.
+# If you run the container with additional arguments, they will override this CMD.
+CMD ["echo", "?"]
