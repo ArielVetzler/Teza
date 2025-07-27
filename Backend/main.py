@@ -60,7 +60,7 @@ app = FastAPI(lifespan=lifespan)
 async def generate_articles_to_redis_task():
     print("Starting article generation task...")
     """Generates articles and sends them to Redis."""
-    qps = 5
+    qps = 100
     article_generator = generate_synthetic_articles(qps=qps)
     print("Article generator initialized.")
     while True:
@@ -72,7 +72,7 @@ async def generate_articles_to_redis_task():
 async def generate_users_and_broadcast_task():
     print("Starting user generation and broadcast task...")
     """Generates users and broadcasts them via WebSocket."""
-    qps = 5
+    qps = 15
     user_generator = generate_synthetic_users(qps=qps)
     while True:
         generated_user = await user_generator.__anext__()
