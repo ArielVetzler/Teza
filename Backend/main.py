@@ -35,7 +35,7 @@ async def lifespan(app: FastAPI):
     await redis_queue.connect()
 
     print("Loading SentenceTransformer model...")
-    embedding_model = SentenceTransformer("all-MiniLM-L6-v2")
+    embedding_model = SentenceTransformer("paraphrase-MiniLM-L3-v2")
     set_embedding_model(embedding_model)
     # Warm-up the embedding model
     print("Warming up embedding model...")
