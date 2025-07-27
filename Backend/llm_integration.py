@@ -10,7 +10,7 @@ class LLMIntegration:
         if not self.api_key:
             raise ValueError("GEMINI_API_KEY not found. Please set it in your .env file.")
         genai.configure(api_key=self.api_key)
-        self.model = genai.GenerativeModel('gemini-1.5-flash-8b')
+        self.model = genai.GenerativeModel('gemini-pro')
 
     async def extract_tags(self, text: str) -> List[str]:
         """Extracts relevant tags from the given text using the LLM."""

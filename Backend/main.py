@@ -24,8 +24,8 @@ connection_manager = ConnectionManager()
 matching_engine = MatchingEngine()
 redis_queue = RedisJobQueue()
 
-# Initialize SentenceTransformer model once
 
+# Initialize SentenceTransformer model once
 
 
 @asynccontextmanager
@@ -55,6 +55,8 @@ async def lifespan(app: FastAPI):
 
 
 app = FastAPI(lifespan=lifespan)
+
+
 async def generate_articles_to_redis_task():
     print("Starting article generation task...")
     """Generates articles and sends them to Redis."""
@@ -113,6 +115,11 @@ async def run_matching_for_user(user: User):
         await connection_manager.broadcast(json.dumps(match_data))
 
 
+@app.get("/")
+def root():
+    return {"status": "API is running"}
+
+
 @app.websocket("/ws")
 async def websocket_endpoint(websocket: WebSocket):
     await connection_manager.connect(websocket)
@@ -123,4 +130,3 @@ async def websocket_endpoint(websocket: WebSocket):
     except WebSocketDisconnect:
         connection_manager.disconnect(websocket)
         print("Client disconnected")
-
