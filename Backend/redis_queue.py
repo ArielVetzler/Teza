@@ -24,7 +24,7 @@ class RedisJobQueue:
             await self.redis.wait_closed()
             logging.info("Successfully disconnected from Redis.")
 
-        async def push_job(self, queue_name: str, job_data: Dict[str, Any]):
+    async def push_job(self, queue_name: str, job_data: Dict[str, Any]):
             """Pushes a job onto the specified Redis queue."""
             if not self.redis:
                 await self.connect()
@@ -32,7 +32,7 @@ class RedisJobQueue:
             await self.redis.rpush(queue_name, json.dumps(job_data))
             logging.info(f"Job pushed to queue '{queue_name}'.")
 
-        async def pop_job(self, queue_name: str, timeout: int = 1) -> Dict[str, Any] or None:
+    async def pop_job(self, queue_name: str, timeout: int = 1) -> Dict[str, Any] or None:
             """Pops a job from the specified Redis queue, blocking until a job is available or timeout occurs."""
             if not self.redis:
                 await self.connect()

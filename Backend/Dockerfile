@@ -5,7 +5,7 @@ WORKDIR /app
 COPY Backend/requirements.txt .
 RUN pip install --no-cache-dir -r requirements.txt &&     pip install --no-cache-dir torch==2.2.2+cpu torchvision==0.17.2+cpu torchaudio==2.2.2+cpu -f https://download.pytorch.org/whl/torch_stable.html &&     rm -rf /root/.cache
 
-COPY Backend/. .
+COPY . .
 
 EXPOSE 8000
 
