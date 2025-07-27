@@ -55,14 +55,6 @@ async def lifespan(app: FastAPI):
 
 
 app = FastAPI(lifespan=lifespan)
-
-# Mount static files for the frontend
-app.mount("/static", StaticFiles(directory="../frontend"), name="static")
-
-
-# --- Background Tasks ---
-
-
 async def generate_articles_to_redis_task():
     print("Starting article generation task...")
     """Generates articles and sends them to Redis."""
