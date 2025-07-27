@@ -1,11 +1,13 @@
 fastapi
-uvicorn[standard]
+uvicorn # Keep it simple, not uvicorn[standard] for now
 redis
 websockets
 aiohttp
 faker
-sentence-transformers
-torch
+torch==1.13.1+cpu
+torchvision==0.14.1+cpu
+torchaudio==0.13.1+cpu
+sentence-transformers==2.2.2
 numpy<2.0
 nltk
 google-generativeai
