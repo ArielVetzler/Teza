@@ -42,7 +42,6 @@ async def generate_synthetic_articles(
         title = fake.sentence(nb_words=random.randint(4, 12))
 
         yield Article(id=article_id, title=title)
-        await asyncio.sleep(interval)
 
 
 # Define user personas with their core interests and likelihoods
@@ -130,4 +129,3 @@ async def generate_synthetic_users(qps: int = 15) -> AsyncGenerator[User, None]:
             tags=tags,
             embedding=get_embedding(tags)
         )
-        await asyncio.sleep(interval)
